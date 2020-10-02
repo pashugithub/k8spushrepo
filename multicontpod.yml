@@ -1,0 +1,17 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: multi-cont-pod
+  labels:
+    app: web
+    env: dev
+spec:
+  containers: 
+   - name: cont1
+     image: httpd
+     ports:
+      - containerPort: 80
+   - name: cont2
+     image: tomcat
+     ports:
+      - containerPort: 8080
